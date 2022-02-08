@@ -12,7 +12,7 @@ const Category = ({ category }) => {
 										{meal.title}
 									</h3>
 									<p className="category-item-desc">
-										{meal.description}
+										{meal.description.slice(0, 50)}...
 									</p>
 									<p className="category-item-price">
 										{meal.price + " €"}

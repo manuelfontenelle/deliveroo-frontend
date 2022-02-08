@@ -45,10 +45,14 @@ function App() {
 							);
 						})}
 					</div>
-					<div class="container-panier">
-						<div class="btn-panier">Valider mon panier</div>
-						<div className="panier-content">
-							<span>Votre panier est vide</span>
+					<div className="panier">
+						<div class="container-panier ">
+							<button class="btn-panier--validate btn-panier--disable">
+								Valider mon panier
+							</button>
+							<div className="panier-content">
+								<span>Votre panier est vide</span>
+							</div>
 						</div>
 					</div>
 					{/* container-main */}
