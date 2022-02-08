@@ -7,21 +7,6 @@ body {
 	background-color: #fff;
 }
 
-.App {
-	/* display: flex;
-	flex-direction: column;
-	align-items: flex-start; */
-}
-
-.container {
-	margin: 0 auto;
-	max-width: 1200px;
-}
-.container-intro {
-	margin: 0 auto;
-
-	border-bottom: 2px solid #f0f0f0;
-}
 h1 {
 	font-weight: bold;
 	font-size: 2rem;
@@ -35,28 +20,35 @@ p {
 	line-height: 1.5;
 }
 
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Header  */
 .header {
 	display: flex;
-
-	/* padding: 0 30px; */
 	align-items: center;
 	height: 80px;
+}
+.container-header {
+	margin: 0 auto;
+	border-bottom: 2px solid #f0f0f0;
 }
 .logo {
 	width: 180px;
 }
 
+/* Intro */
 .intro {
 	padding: 20px 0;
-	/* padding: 25px 35px; */
 	display: flex;
 }
-.left {
+.left-intro {
 	flex: 1 1;
 	flex-direction: row;
 	margin-right: 30px;
 }
-
 .img-intro {
 	width: 350px;
 	border-radius: 10px;
@@ -65,63 +57,46 @@ p {
 	object-fit: cover;
 }
 
+/* Category */
 .main {
 	padding: 20px 0;
-	/* padding: 25px 35px; */
 	background-color: #f0f0f0;
-
 	flex-direction: row;
 }
-
 .container-main {
+	margin: 0 auto;
+	max-width: 1200px;
+	background-color: #f0f0f0;
 	display: flex;
-	gap: 10px;
+	gap: 20px;
 }
-
-.category-container {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	/* justify-content: ; */
-}
-
-.category {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.panier {
-	width: 350px;
-	height: 300px;
-	/* flex: 1; */
-	background-color: white;
-	border-radius: 10px;
-}
-
 .category-title {
 	font-size: 22px;
 	color: black;
 	font-weight: bold;
+	margin-bottom: 20px;
 }
 
+.container-categories {
+	flex: 1;
+}
+.category {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 .category-item {
 	padding: 20px;
-	/* height: 170px; */
 	border-radius: 10px;
 	background-color: white;
 	display: flex;
-	width: 47%;
+	width: 49%;
 	flex-direction: row;
 	align-items: flex-start;
-	margin: 20px 20px 20px 0;
-
-	/* flex: 1; */
+	margin-bottom: 20px;
 }
 
-/* .category-item:first-child {
-	margin-left: 0;
-} */
 .category-item-title {
 	font-size: 16px;
 	color: black;
@@ -146,4 +121,30 @@ p {
 	width: 130px;
 	object-fit: cover;
 	border-radius: 5px;
+}
+
+.container-panier {
+	width: 350px;
+	height: 300px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.btn-panier {
+	text-align: center;
+	background-color: #00ccbc;
+	border-radius: 5px;
+	font-weight: bold;
+	line-height: 50px;
+	color: white;
+}
+.panier-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 220px;
+}
+
+.panier-content span {
 }
