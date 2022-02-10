@@ -1,13 +1,25 @@
-const Category = ({ category }) => {
+const Category = ({ category, addBasket }) => {
 	return (
 		<>
 			<h2 className="category-title">{category.name}</h2>
-			<div class="category">
+			<div className="category">
 				{category.meals.map((meal, index) => {
 					return (
 						<>
-							<div class="category-item" key={index}>
-								<div class="category-item-left" key={index}>
+							<div
+								className="category-item"
+								key={meal.id}
+								onClick={() => {
+									addBasket(meal)
+								}}
+								// onClick={() => {
+								// 	console.log(
+								// 		"J'ai cliqué sur le produit ====> ",
+								// 		meal
+								// 	);
+								// }}
+							>
+								<div className="category-item-left">
 									<h3 className="category-item-title">
 										{meal.title}
 									</h3>
@@ -27,11 +39,11 @@ const Category = ({ category }) => {
 								)}
 							</div>
 						</>
-					);
+					)
 				})}
 			</div>
 		</>
-	);
-};
+	)
+}
 
-export default Category;
+export default Category
