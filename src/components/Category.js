@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 const Category = ({ category, addBasket }) => {
 	return (
 		<>
@@ -20,15 +22,20 @@ const Category = ({ category, addBasket }) => {
 								// }}
 							>
 								<div className="category-item-left">
-									<h3 className="category-item-title">
-										{meal.title}
-									</h3>
+									<h3 className="category-item-title">{meal.title}</h3>
 									<p className="category-item-desc">
-										{meal.description.slice(0, 50)}...
+										{meal.description.length > 70
+											? meal.description.slice(0, 80) + " ..."
+											: meal.description}
 									</p>
-									<p className="category-item-price">
-										{meal.price + " €"}
-									</p>
+									<div className="category-items-bottom">
+										<p className="category-item-price">{meal.price + " €"}</p>
+										{meal.popular && (
+											<span className="category-item-icon">
+												<FontAwesomeIcon icon="star" /> Populaire
+											</span>
+										)}
+									</div>
 								</div>
 								{meal.picture && (
 									<img
