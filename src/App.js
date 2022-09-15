@@ -50,6 +50,17 @@ function App() {
 	}, [])
 
 	const addBasket = (meal) => {
+		// //AUTRE FACON DE FAIRE POUR DETECTER SI UN ELEMENT EXISTE ET INCREMENTTER LA QUANTITE
+		// //rechercher dans newBasket, si le produits n' a pas deja été ajouté
+		// for (let i = 0; i < basket.length; i++) {
+		// 	//on se sert de l'id car unique
+		// 	if (basket[i].id === meal.id) {
+		// 		newBasket[i].quantity++
+		// 		//le break sert a interrompre la boucle
+		// 		break
+		// 	}else (newBasket.push(meal))
+		// }
+
 		// push un 0 dans counters
 
 		// Créer une copie de counters
@@ -73,6 +84,7 @@ function App() {
 
 	const substractFromCart = (meal) => {
 		const newBasket = [...basket]
+
 		// On cherche dans newCart l'objet pour lequel on veut décrémenter la quantité
 		const exist = newBasket.find((elem) => elem.id === meal.id)
 		if (exist.quantity === 1) {
