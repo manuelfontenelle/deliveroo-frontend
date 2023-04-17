@@ -51,17 +51,12 @@ p {
 }
 .logo {
 	width: 180px;
-}
-
-@media (max-width: 885px) {
-	.logo {
-		padding-left: 15px;
-	}
+	padding-left: 15px;
 }
 
 /* Intro */
 .intro {
-	padding: 20px 0;
+	padding: 20px;
 	display: flex;
 }
 .left-intro {
@@ -95,14 +90,9 @@ p {
 
 /* Category */
 .main {
-	padding: 20px 0;
+	padding: 20px 20px;
 	background-color: #f0f0f0;
 	flex-direction: row;
-}
-@media (max-width: 885px) {
-	.main {
-		padding: 20px 20px;
-	}
 }
 
 .container-main {
